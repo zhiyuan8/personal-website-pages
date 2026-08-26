@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://zackli.ai/</loc>
+<image:image>
+<image:loc>https://zackli.ai/home/selfie.webp</image:loc>
+</image:image>
+<lastmod>2026-08-26T04:44:19.190Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://zackli.ai/recognition/</loc>
+<lastmod>2026-08-26T04:44:19.190Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://zackli.ai/publication/</loc>
+<lastmod>2026-08-26T04:44:19.190Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://zackli.ai/personal/</loc>
+<lastmod>2026-08-26T04:44:19.190Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://zackli.ai/project/</loc>
+<lastmod>2026-08-26T04:44:19.190Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>

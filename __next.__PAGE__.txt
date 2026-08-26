@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[79817,["/_next/static/chunks/4761f4c1ad765599.js","/_next/static/chunks/ee76f40073646342.js"],"default"]
+3:I[36345,["/_next/static/chunks/33074d3ff5d0cd2d.js","/_next/static/chunks/c4d90098b4abc498.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"451eHwCKQ_A6vDu2UryI7","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"ProfilePage\",\"@id\":\"https://zackli.ai/#profilepage\",\"url\":\"https://zackli.ai\",\"name\":\"Zack Li — Entrepreneur, Builder, Lifelong Learner\",\"mainEntity\":{\"@id\":\"https://zackli.ai/#person\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://zackli.ai\"}]}}"}}],["$","$L2",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/ee76f40073646342.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
