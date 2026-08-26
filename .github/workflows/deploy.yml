@@ -1,0 +1,58 @@
+name: Build from private source
+
+# Runs on this PUBLIC repo so GitHub Actions is free.
+# Private personal-website Actions are blocked when billing/spending fails.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout host repo
+        uses: actions/checkout@v4
+
+      # Read-only deploy key on zhiyuan8/personal-website
+      - name: Clone private source
+        env:
+          SOURCE_DEPLOY_KEY: ${{ secrets.SOURCE_DEPLOY_KEY }}
+        run: |
+          # Use the source-repo deploy key without printing it
+          install -d -m 700 ~/.ssh
+          install -m 600 /dev/null ~/.ssh/id_ed25519
+          printf '%s\n' "$SOURCE_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git clone --depth 1 git@github.com:zhiyuan8/personal-website.git source
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          package_json_file: source/package.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: source/pnpm-lock.yaml
+
+      - name: Install and build
+        working-directory: source
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+          echo "zackli.ai" > ./out/CNAME
+          touch ./out/.nojekyll
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./source/out
+          cname: zackli.ai
+          force_orphan: true

@@ -6,8 +6,9 @@ Public GitHub Pages host for **https://zackli.ai**. Source stays private in [`pe
 
 ## How it works
 
-- Push to `main` in [`personal-website`](https://github.com/zhiyuan8/personal-website) builds the static export.
-- The workflow force-pushes `out/` to the `gh-pages` branch here.
+- Edit the site in [`personal-website`](https://github.com/zhiyuan8/personal-website) (private).
+- Redeploy from this repo: Actions → **Build from private source** → Run workflow.
+- That job clones the private source, builds `out/`, and force-pushes `gh-pages`.
 - GitHub Pages serves `gh-pages` at `zackli.ai`.
 
 ## Rules
